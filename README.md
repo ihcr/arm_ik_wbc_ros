@@ -1,1 +1,1 @@
-# ik_wbc_arm_ros
+# arm_ik_wbc_ros
