@@ -1,0 +1,35 @@
+################################################################################
+# robot info
+################################################################################
+name: "dofarm"
+
+
+################################################################################
+# robot configs
+################################################################################
+sim_robot_variables:
+  urdf_filename: "/models/arm/dofarm.urdf"
+
+  use_fixed_base: True
+
+  base_name: "base"
+  joint_names: [
+    "base_waist", "waist_shoulder", "shoulder_arm", "arm_forearm", "forearm_wrist", "wrist_wrist2" 
+  ]  # pinocchio order
+  limb_names: ["arm"]
+  limb_endeff_names: ["wrist2"]
+
+  base_init_pos: [0., 0., 0., 0., 0., 0., 1.] # posture
+  base_init_vel: [0., 0., 0., 0., 0., 0.]
+  joint_init_pos: [0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+  joint_init_vel: [0., 0., 0., 0., 0., 0.]
+
+
+################################################################################
+# control configs
+################################################################################
+control_variables:
+  joint_names: [
+    "base_waist", "waist_shoulder", "shoulder_arm", "arm_forearm", "forearm_wrist", "wrist_wrist2" 
+  ]  # pinocchio order
+  joint_des_pos: [0.1, 0.1, 0.1, 0.1, 0.1, 0.1]

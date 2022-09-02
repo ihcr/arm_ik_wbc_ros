@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>leeds_vx300s_description</name>
+  <version>1.0.0</version>
+  <description>
+  
+     leeds_vx300s_description contains the urdf description and meshes of vx300s
+
+  </description>
+
+  <maintainer email="C.X.Zhou@leeds.ac.uk">Chengxu Zhou</maintainer>
+  <license>BSD</license>
+  <author email="el20jeh@leeds.ac.uk">Joseph Humphreys</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>

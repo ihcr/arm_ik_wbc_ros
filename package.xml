@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<package format="2">
+  <name>arm_ik_wbc_ros</name>
+  <version>0.0.0</version>
+  <description>
+    ros interface for arm_ik_wbc.
+  </description>
+  <maintainer email="el20jeh@leeds.ac.uk">joey</maintainer>
+  <license>TODO</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>message_runtime</depend>
+  <depend>message_generation</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>roscpp</depend>
+  
+</package>

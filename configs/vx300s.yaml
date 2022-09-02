@@ -1,0 +1,37 @@
+################################################################################
+# robot info
+################################################################################
+name: "vx300s"
+
+
+################################################################################
+# robot configs
+################################################################################
+sim_robot_variables:
+  urdf_filename: "/models/vx300s/urdf/vx300s.urdf"
+  mesh_foldername: "/models/vx300s/vx300s_meshes"
+  use_fixed_base: True
+
+  base_name: "waist"
+  joint_names: [
+    "waist", "shoulder", "elbow", "forearm_roll", "wrist_angle", "wrist_rotate" 
+  ]  # pinocchio order
+  limb_names: ["arm"]
+  limb_endeff_names: ["vx300s/ee_gripper_link"]
+  limb_endeff_joint_names: ["ee_gripper"]
+  limb_endeff_frame_names: [ "ee_gripper"]
+
+  base_init_pos: [0., 0., 0.1, 0., 0., 0., 1.] # posture
+  base_init_vel: [0., 0., 0., 0., 0., 0.]
+  joint_init_pos: [0., -0.7, 1.3, 0.,-0.6, 0.]
+  joint_init_vel: [0., 0., 0., 0., 0., 0., 0.]
+
+
+################################################################################
+# control configs
+################################################################################
+control_variables:
+  joint_names: [
+    "waist", "shoulder", "elbow", "forearm_roll", "wrist_angle", "wrist_rotate" 
+  ]  # pinocchio order
+  joint_des_pos: [0., -0.7, 1.3, 0.,-0.6, 0.]
