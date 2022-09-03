@@ -1,0 +1,27 @@
+<launch>
+  <!-- parameters -->
+  <arg name="robot_model"                       default=""/>
+  <arg name="robot_name"                        default="$(arg robot_model)"/>
+  <arg name="motor_configs"                     default="$(find interbotix_ihrc)/config/$(arg robot_model).yaml"/>
+  <arg name="mode_configs"                      default="$(find interbotix_ihrc)/config/modes.yaml"/>
+  <arg name="load_configs"                      default="true"/>
+  <arg name="config" default="/configs/$(arg robot_model).yaml"/>
+  <arg name="node_name" default="interbotix_arm_wbc"/>
+
+  <!-- node -->
+  <node
+    name="xs_sdk"
+    pkg="interbotix_ihrc"
+    type="xs_sdk"
+    output="screen"
+    ns="$(arg robot_name)">
+    <param name="motor_configs"                   value="$(arg motor_configs)"/>
+    <param name="mode_configs"                    value="$(arg mode_configs)"/>
+    <param name="load_configs"                    value="$(arg load_configs)"/>
+  </node>
+
+  <!-- node -->
+  <node pkg="arm_ik_wbc_ros" type="interbotix_ik_wbc_node.py" name="$(arg node_name)" output="screen" >
+		<param name="config" value="$(arg config)"/>
+  </node>
+</launch>

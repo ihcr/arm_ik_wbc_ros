@@ -44,7 +44,11 @@ catkin_package(
 include_directories(include ${catkin_INCLUDE_DIRS})
 
 
-
+install(PROGRAMS
+  nodes/ik_wbc_arm_demo_node.py
+  nodes/interbotix_ik_wbc_node.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 
 

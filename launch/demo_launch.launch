@@ -1,0 +1,9 @@
+<launch>
+    <!-- parameters -->
+    <arg name="config" default="/configs/vx300s.yaml"/>
+
+    <!-- node -->
+	<node pkg="arm_ik_wbc_ros" type="ik_wbc_arm_demo_node.py" name="params" output="screen" >
+		<param name="config" value="$(arg config)"/>
+	</node>
+</launch>
