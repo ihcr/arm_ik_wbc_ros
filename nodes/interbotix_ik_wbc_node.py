@@ -104,6 +104,7 @@ def main():
     rospy.Subscriber("/"+configs["name"]+"/joint_states", JointState, joint_callback)
     send_data = rospy.Publisher("/"+configs["name"]+"/commands/joint_group", JointGroupCommand, queue_size=10)
     data = JointGroupCommand()
+    data.name = 'arm'
     arm_init = False
     input_init = False
     
