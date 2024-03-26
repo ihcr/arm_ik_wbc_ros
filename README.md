@@ -38,11 +38,6 @@ cd <work_folder>/
 roslaunch ./src/arm_ik_wbc_ros/launch/interbotix_wbc.launch robot_model:=vx300s
 ```
 
-### Launching the simulation node:
-```
-TODO!
-```
-
 ### Topics
 Once launched, the input to the wbc can be provided to this topic, although it should be noted that no input topic is active during the demo:
 ```
@@ -59,5 +54,5 @@ If the simulation node is launched, the output is send to:
 
 ### License and Copyrights
 
-Copyright (c) 2021, University of Leeds and Harbin Institute of Technology.
+Copyright (c) 2021, University of Leeds.
 BSD 3-Clause License
